@@ -13,6 +13,10 @@ const typeDefs = `
     todo(id: ID!): Todo
     filterTodos(status: Boolean): [Todo]
   }
+  type Mutation {
+    addTodo(text: String!): Todo
+    removeTodo(index: Int!): [Todo]
+  }
 `;
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });

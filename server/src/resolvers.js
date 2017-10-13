@@ -17,6 +17,22 @@ const resolvers = {
     todo: (root, { id }) => todos.find(todo => todo.id === id),
     filterTodos: (root, { status }) => todos.filter(todo => todo.complete === status),
   },
+  Mutation: {
+    addTodo: (root, { text }) =>  {
+      const nextId = todos.length + 1;
+      const todo = {
+        id: nextId,
+        text,
+        complete: false,
+      };
+      todos.push(todo);
+      return todo;
+    },
+    removeTodo: (root, { index }) => {
+      todos.splice(index, 1);
+      return todos;
+    }
+  }
 };
 
 export default resolvers;
