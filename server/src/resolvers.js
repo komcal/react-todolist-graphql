@@ -15,6 +15,7 @@ const resolvers = {
   Query: {
     todos: () => todos,
     todo: (root, { id }) => todos.find(todo => todo.id === id),
+    filterTodos: (root, { status }) => todos.filter(todo => todo.complete === status),
   },
 };
 
