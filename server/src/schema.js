@@ -16,6 +16,7 @@ const typeDefs = `
   type Mutation {
     addTodo(text: String!): Todo
     removeTodo(index: Int!): [Todo]
+    checkTodo(status: Boolean, index: Int!): [Todo]
   }
 `;
 

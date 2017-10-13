@@ -31,6 +31,10 @@ const resolvers = {
     removeTodo: (root, { index }) => {
       todos.splice(index, 1);
       return todos;
+    },
+    checkTodo: (root, { status, index }) => {
+      todos[index].complete = status;
+      return todos;
     }
   }
 };
