@@ -28,13 +28,16 @@
     "nodemon": "^1.12.1"
   },
   "dependencies": {
+    "apollo-client": "^1.9.3",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "graphql": "^0.11.7",
     "graphql-server-express": "^1.1.6",
     "graphql-tools": "^2.5.0",
     "next": "^4.0.3",
     "react": "^16.0.0",
+    "react-apollo": "^1.4.16",
     "react-dom": "^16.0.0"
   }
 }

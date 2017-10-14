@@ -1,2 +1,7 @@
 import React from 'react';
-export default () => <div>Welcome to next.js!</div>
+import withApp from '../lib/withApp';
+import Index from '../containers/Index';
+
+const IndexPage = props => (<Index {...props} />);
+
+export default withApp()(IndexPage);
