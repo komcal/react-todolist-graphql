@@ -1,6 +1,8 @@
 import React from 'react';
 import { gql, graphql } from 'react-apollo';
 
+import TodoInput from '../components/TodoInput';
+
 const TodosList = ({ data: { loading, error, todos }}) => {
   if (loading) {
     return <p>Loading ...</p>;
@@ -17,6 +19,7 @@ const TodosList = ({ data: { loading, error, todos }}) => {
           ))
         }
       </ul>
+      <TodoInput />
     </div>
   );
 }
